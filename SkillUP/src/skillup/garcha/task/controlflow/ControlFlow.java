@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package skillup.garcha.task.controlflow;
 
 /**
@@ -19,9 +14,11 @@ public class ControlFlow {
         int a = 3;
         int b = -3130013;
         int count = findAinB(a, b);
-        System.out.println("A in B: "+ a + " in " + b + " occurs " + count + "x times");
+        System.out.println("A in B: "+ a + " in " + b + " occurs " + count + "x times\n");
         
-        
+        // Number statistics
+        int[] numbers = new int[] {2,67,9,3,43};
+        numberStatistics(numbers);
     }
 
     public static int findAinB(int a, int b) {
@@ -41,5 +38,26 @@ public class ControlFlow {
     }
     
     
+    public static void numberStatistics(int[] numbers) {
+        int total = numbers.length;
+        int min = numbers[0];
+        int max = min;
+        int sum = 0;
+            
+        for (int n: numbers) {
+            if(n > max) 
+                max = n;
+            else if (n < min)
+                min = n;
+            sum += n;
+        } 
+        
+        System.out.println("Statistics:");
+        System.out.println("Total numbers: "+total);
+        System.out.println("min: "+min);
+        System.out.println("max: "+max);
+        System.out.println("avg: "+(sum / total));
+        
+    }
     
 }
