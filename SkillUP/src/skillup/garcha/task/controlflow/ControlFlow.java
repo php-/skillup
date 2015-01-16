@@ -30,6 +30,9 @@ public class ControlFlow {
         
         System.out.println("\nNumber triangle printer right aligned:");
         numberTrianglePrintingRight();
+		
+		System.out.println("\nCar traffic, light:");
+		carTrafficLight(27.01);
     }
 
     public static int findAinB(int a, int b) {
@@ -76,9 +79,9 @@ public class ControlFlow {
         for (int i = 0; i < 5; i ++) {
             for (int j = 4; j > -1; j --) {
                 if(j <= i)
-                    System.out.print(" "+j);
-                else
-                    System.out.print("");
+                    System.out.print(" " + j);
+                //else
+                //    System.out.print("");
             }
             System.out.print("\n");
         }
@@ -89,7 +92,7 @@ public class ControlFlow {
         for (int i = 1; i < 6; i ++) {
             for (int j = 5; j > 0; j --) {
                 if(j <= i)
-                    System.out.print(" "+j);
+                    System.out.print(" " + j);
                 else
                     System.out.print("  ");
             }
@@ -97,12 +100,23 @@ public class ControlFlow {
         }
     }
     
-    public static void carTrafficLight(Number t) {
+    public static void carTrafficLight(double minute) {
         int green = 3;
         int yellow = 1;
         int red = 2;
         
+        int sum = green + yellow + red;
         
+        double remainder = minute % sum;
+        System.out.println(""+remainder);
+        
+        if (remainder < green) {
+            System.out.println("Green!");
+        } else if (remainder < green + yellow) {
+            System.out.println("Yellow!");
+        } else {
+            System.out.println("Red!");
+        }
         
     }
     
