@@ -22,7 +22,7 @@ public class CarMarket {
         
         for(int i = 0; i < count; i++)
         {
-            tmpCar = CarFactory.createCar("BMW", "D5", 1900);
+            tmpCar = BasicCarFactory.createCar("BMW", "D5", 1900);
             cars[i] = tmpCar;
         }
         
